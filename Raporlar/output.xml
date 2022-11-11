@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221112 01:27:10.184" rpa="false" schemaversion="3">
+<suite id="s1" name="L01 UserDefinedKeywords" source="C:\development\robot-scripts\Automation\TestCases\Part13\L01_UserDefinedKeywords.robot">
+<test id="s1-t1" name="TC1" line="10">
+<kw name="launchBrowser">
+<var>${PageTitle}</var>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${appbrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221112 01:27:10.386" level="INFO">Opening browser 'chrome' to base url 'https://sockston.com/'.</msg>
+<status status="PASS" starttime="20221112 01:27:10.386" endtime="20221112 01:27:20.039"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221112 01:27:20.039" endtime="20221112 01:27:20.042"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20221112 01:27:20.065" level="INFO">${title} = SocksTon – Start the day with happy steps! Colorful and Patterned Socks and Stylish Wear</msg>
+<status status="PASS" starttime="20221112 01:27:20.042" endtime="20221112 01:27:20.065"/>
+</kw>
+<msg timestamp="20221112 01:27:20.065" level="INFO">${PageTitle} = SocksTon – Start the day with happy steps! Colorful and Patterned Socks and Stylish Wear</msg>
+<status status="PASS" starttime="20221112 01:27:10.385" endtime="20221112 01:27:20.065"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221112 01:27:20.066" endtime="20221112 01:27:20.066"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${PageTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221112 01:27:20.067" level="INFO">SocksTon – Start the day with happy steps! Colorful and Patterned Socks and Stylish Wear</msg>
+<status status="PASS" starttime="20221112 01:27:20.067" endtime="20221112 01:27:20.067"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://*[@id="page"]/header/div[2]/div/div/section[2]/div/div/div[1]/div/div/div[2]/div/div/a[1]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221112 01:27:20.067" level="INFO">Clicking link 'xpath://*[@id="page"]/header/div[2]/div/div/section[2]/div/div/div[1]/div/div/div[2]/div/div/a[1]'.</msg>
+<status status="PASS" starttime="20221112 01:27:20.067" endtime="20221112 01:27:27.256"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221112 01:27:27.256" endtime="20221112 01:27:29.429"/>
+</kw>
+<status status="PASS" starttime="20221112 01:27:10.384" endtime="20221112 01:27:29.430"/>
+</test>
+<status status="PASS" starttime="20221112 01:27:10.186" endtime="20221112 01:27:29.435"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="L01 UserDefinedKeywords">L01 UserDefinedKeywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

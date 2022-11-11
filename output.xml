@@ -1,58 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221105 18:18:19.352" rpa="false" schemaversion="3">
-<suite id="s1" name="TC1" source="C:\development\robot-scripts\Automation\TestCases\TC1.robot">
-<test id="s1-t1" name="LoginTest" line="10">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221110 03:07:28.054" rpa="false" schemaversion="3">
+<suite id="s1" name="L01 CaptureScreen" source="C:\development\robot-scripts\Automation\TestCases\Part11\L01_CaptureScreen.robot">
+<test id="s1-t1" name="LoginTC" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}}</arg>
+<arg>https://secure.login.gov/</arg>
+<arg>edge</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221105 18:18:19.573" level="INFO">Opening browser 'chrome}' to base url 'https://demo.nopcommerce.com/'.</msg>
-<msg timestamp="20221105 18:18:19.573" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20221105 18:18:19.573" level="FAIL">ValueError: chrome} is not a supported browser.</msg>
-<status status="FAIL" starttime="20221105 18:18:19.572" endtime="20221105 18:18:19.575"/>
+<msg timestamp="20221110 03:07:28.258" level="INFO">Opening browser 'edge' to base url 'https://secure.login.gov/'.</msg>
+<status status="PASS" starttime="20221110 03:07:28.258" endtime="20221110 03:07:33.318"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221105 18:18:19.576" endtime="20221105 18:18:19.577"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath://*[@class="ico-login"]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221105 18:18:19.577" endtime="20221105 18:18:19.577"/>
+<status status="PASS" starttime="20221110 03:07:33.318" endtime="20221110 03:07:33.436"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Email</arg>
-<arg>pezoteyo@hml.com</arg>
+<arg>id:user_email</arg>
+<arg>osmosahanen@heti.fr</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221105 18:18:19.578" endtime="20221105 18:18:19.578"/>
+<msg timestamp="20221110 03:07:33.437" level="INFO">Typing text 'osmosahanen@heti.fr' into text field 'id:user_email'.</msg>
+<status status="PASS" starttime="20221110 03:07:33.436" endtime="20221110 03:07:33.520"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id:Password</arg>
-<arg>Test*123</arg>
+<arg>name:user[password]</arg>
+<arg>hop12345</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221105 18:18:19.578" endtime="20221105 18:18:19.578"/>
+<msg timestamp="20221110 03:07:33.521" level="INFO">Typing text 'hop12345' into text field 'name:user[password]'.</msg>
+<status status="PASS" starttime="20221110 03:07:33.520" endtime="20221110 03:07:33.587"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://*[@class="button-1 login-button"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221105 18:18:19.578" endtime="20221105 18:18:19.578"/>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>id:new_user</arg>
+<arg>loginBox.jpg</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20221110 03:07:33.706" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="loginBox.jpg"&gt;&lt;img src="loginBox.jpg" width="400px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221110 03:07:33.706" level="INFO">C:\Users\PC\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webelement.py:346: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  warnings.warn("name used for saved screenshot does not match file "</msg>
+<status status="PASS" starttime="20221110 03:07:33.587" endtime="20221110 03:07:33.706"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>Page.jpg</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221110 03:07:33.886" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page.jpg"&gt;&lt;img src="Page.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221110 03:07:33.886" level="INFO">C:\Users\PC\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\remote\webdriver.py:925: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  warnings.warn("name used for saved screenshot does not match file "</msg>
+<status status="PASS" starttime="20221110 03:07:33.707" endtime="20221110 03:07:33.887"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20221105 18:18:19.578" endtime="20221105 18:18:19.579"/>
+<status status="PASS" starttime="20221110 03:07:33.887" endtime="20221110 03:07:36.029"/>
 </kw>
-<status status="FAIL" starttime="20221105 18:18:19.572" endtime="20221105 18:18:19.579">ValueError: chrome} is not a supported browser.</status>
+<status status="PASS" starttime="20221110 03:07:28.257" endtime="20221110 03:07:36.031"/>
 </test>
-<status status="FAIL" starttime="20221105 18:18:19.354" endtime="20221105 18:18:19.580"/>
+<status status="PASS" starttime="20221110 03:07:28.055" endtime="20221110 03:07:36.036"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TC1">TC1</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="L01 CaptureScreen">L01 CaptureScreen</stat>
 </suite>
 </statistics>
 <errors>
