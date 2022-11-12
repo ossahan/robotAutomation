@@ -1,9 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    ../Resources/P013_L2_Resources.robot
 
 *** Variables ***
 ${url}    https://sockston.com/
 ${browser}    chrome
+
 
 
 *** Test Cases ***
@@ -16,10 +18,4 @@ TC1
 
         close browser
 
-*** Keywords ***
-launchBrowser
-        [Arguments]    ${appurl}    ${appbrowser}
-        open browser    ${appurl}     ${appbrowser}
-        maximize browser window
-        ${title}    get title
-        [Return]    ${title}
+

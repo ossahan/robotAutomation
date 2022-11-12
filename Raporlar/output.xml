@@ -1,55 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221112 01:27:10.184" rpa="false" schemaversion="3">
-<suite id="s1" name="L01 UserDefinedKeywords" source="C:\development\robot-scripts\Automation\TestCases\Part13\L01_UserDefinedKeywords.robot">
-<test id="s1-t1" name="TC1" line="10">
-<kw name="launchBrowser">
-<var>${PageTitle}</var>
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${appurl}</arg>
-<arg>${appbrowser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221112 01:27:10.386" level="INFO">Opening browser 'chrome' to base url 'https://sockston.com/'.</msg>
-<status status="PASS" starttime="20221112 01:27:10.386" endtime="20221112 01:27:20.039"/>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221112 02:56:30.700" rpa="false" schemaversion="3">
+<suite id="s1" name="P15 L1 ForLoopDemo" source="C:\development\robot-scripts\Automation\TestCases\P15_L1_ForLoopDemo.robot">
+<test id="s1-t1" name="ForLoop" line="5">
+<kw name="ForLoop6WithExit">
+<kw name="Create List" library="BuiltIn">
+<var>@{items}</var>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20221112 02:56:30.903" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20221112 02:56:30.902" endtime="20221112 02:56:30.903"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221112 01:27:20.039" endtime="20221112 01:27:20.042"/>
-</kw>
-<kw name="Get Title" library="SeleniumLibrary">
-<var>${title}</var>
-<doc>Returns the title of the current page.</doc>
-<msg timestamp="20221112 01:27:20.065" level="INFO">${title} = SocksTon – Start the day with happy steps! Colorful and Patterned Socks and Stylish Wear</msg>
-<status status="PASS" starttime="20221112 01:27:20.042" endtime="20221112 01:27:20.065"/>
-</kw>
-<msg timestamp="20221112 01:27:20.065" level="INFO">${PageTitle} = SocksTon – Start the day with happy steps! Colorful and Patterned Socks and Stylish Wear</msg>
-<status status="PASS" starttime="20221112 01:27:10.385" endtime="20221112 01:27:20.065"/>
-</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{items}</value>
+<iter>
+<var name="${i}">1</var>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${PageTitle}</arg>
+<arg>${i}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221112 01:27:20.066" endtime="20221112 01:27:20.066"/>
+<status status="PASS" starttime="20221112 02:56:30.903" endtime="20221112 02:56:30.903"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${PageTitle}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20221112 01:27:20.067" level="INFO">SocksTon – Start the day with happy steps! Colorful and Patterned Socks and Stylish Wear</msg>
-<status status="PASS" starttime="20221112 01:27:20.067" endtime="20221112 01:27:20.067"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221112 02:56:30.904" endtime="20221112 02:56:30.904"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath://*[@id="page"]/header/div[2]/div/div/section[2]/div/div/div[1]/div/div/div[2]/div/div/a[1]</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221112 01:27:20.067" level="INFO">Clicking link 'xpath://*[@id="page"]/header/div[2]/div/div/section[2]/div/div/div[1]/div/div/div[2]/div/div/a[1]'.</msg>
-<status status="PASS" starttime="20221112 01:27:20.067" endtime="20221112 01:27:27.256"/>
+<status status="PASS" starttime="20221112 02:56:30.903" endtime="20221112 02:56:30.904"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221112 02:56:30.904" endtime="20221112 02:56:30.904"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221112 01:27:27.256" endtime="20221112 01:27:29.429"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221112 02:56:30.904" endtime="20221112 02:56:30.905"/>
 </kw>
-<status status="PASS" starttime="20221112 01:27:10.384" endtime="20221112 01:27:29.430"/>
+<status status="PASS" starttime="20221112 02:56:30.904" endtime="20221112 02:56:30.905"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221112 02:56:30.905" endtime="20221112 02:56:30.905"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20221112 02:56:30.906" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20221112 02:56:30.905" endtime="20221112 02:56:30.906"/>
+</kw>
+<status status="PASS" starttime="20221112 02:56:30.905" endtime="20221112 02:56:30.906"/>
+</iter>
+<status status="PASS" starttime="20221112 02:56:30.903" endtime="20221112 02:56:30.906"/>
+</for>
+<status status="PASS" starttime="20221112 02:56:30.902" endtime="20221112 02:56:30.906"/>
+</kw>
+<status status="PASS" starttime="20221112 02:56:30.901" endtime="20221112 02:56:30.907"/>
 </test>
-<status status="PASS" starttime="20221112 01:27:10.186" endtime="20221112 01:27:29.435"/>
+<status status="PASS" starttime="20221112 02:56:30.702" endtime="20221112 02:56:30.908"/>
 </suite>
 <statistics>
 <total>
@@ -58,7 +75,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="L01 UserDefinedKeywords">L01 UserDefinedKeywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="P15 L1 ForLoopDemo">P15 L1 ForLoopDemo</stat>
 </suite>
 </statistics>
 <errors>
