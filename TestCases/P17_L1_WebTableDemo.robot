@@ -29,5 +29,5 @@ TableHandling
     ${anyData1}    get text     xpath://*[@id="datatable_ajax"]/tbody/tr
     log to console    ${anyData1}
 
-    table column should contain     xpath://*[@id="datatable_ajax"]/tbody    2      customerservice
+    table column should contain     xpath://*[@id="datatable_ajax"]/tbody/tr    3      customerservice
 

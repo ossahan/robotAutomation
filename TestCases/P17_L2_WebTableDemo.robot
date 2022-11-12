@@ -4,6 +4,9 @@ Library    SeleniumLibrary
 ${browser}  chrome
 ${url}  https://the-internet.herokuapp.com/tables
 *** Test Cases ***
+TC1
+    Validations
+*** Keywords ***
 Table Test
     open browser    ${url}  ${browser}
     maximize browser window
@@ -19,13 +22,14 @@ Table Test
     log to console    ${Rows}
 Validations
 #Validate header
-
-    wait until element is visible    xpath://table[@id='table2']
-    #table header should contain     xpath://table[@id='table2']          Action
+    open browser    ${url}  ${browser}
+    maximize browser window
+    #wait until element is enabled      xpath://table[@id='table1']
+    table header should contain       id:table1              Action
 #Validate row
-    #table row should contain        xpath://table[@id='table2']     3       http://www.jdoe.com
+    table row should contain         xpath://table[@id="table1"]/tbody       3     	    Jason
 #Validate column
-    #table column should contain    xpath://table[@id='table2']  5   Web Site
+    table column should contain      xpath://table[@id='table1']     5      Web Site
 #Validate cell
-    table cell should contain    xapth://table[@id='table2']    4   3   fbach@yahoo.com
+    table cell should contain      xpath://table[@id='table1']      3   3    fbach@yahoo.com
    close browser
