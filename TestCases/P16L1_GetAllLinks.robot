@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${i}=  1
+
 *** Test Cases ***
 LinksTest
         GetAllLinksTest

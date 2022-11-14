@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+
 *** Variables ***
 ${browser}  chrome
 ${url}  https://the-internet.herokuapp.com/tables
@@ -27,9 +28,10 @@ Validations
     #wait until element is enabled      xpath://table[@id='table1']
     table header should contain       id:table1              Action
 #Validate row
-    table row should contain         xpath://table[@id="table1"]/tbody       3     	    Jason
+
+    table row should contain         xpath://table[@id="table1"]       3     	2    Jason
+    sleep    10
 #Validate column
-    table column should contain      xpath://table[@id='table1']     5      Web Site
-#Validate cell
-    table cell should contain      xpath://table[@id='table1']      3   3    fbach@yahoo.com
-   close browser
+#    table column should contain      xpath://table[@id='table1']     5      Web Site
+##Validate cell
+#    table cell should contain      xpath://table[@id='table1']      3   3    fbach@yahoo.com
