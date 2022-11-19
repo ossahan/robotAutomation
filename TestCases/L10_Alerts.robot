@@ -9,9 +9,9 @@ HandlingAlerts
 
     #click element    xpath://*[text()='Click for JS Alert']
     click element    //*[text()='Click for JS Confirm']
-        sleep     3s
+
 
     #handle alert    Leave
     #handle alert    Accept
-    #handle alert    dismiss
-    alert should not be present   Merhaba
+    handle alert    dismiss
+    alert should not be present
