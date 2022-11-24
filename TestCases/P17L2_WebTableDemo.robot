@@ -35,9 +35,9 @@ Validations
     #wait until element is enabled    xpath://table[@id='table1']
     table header should contain    id:table1    Action
 #Validate row
-    table row should contain    xpath://table[@id="table1"]    3    osman
-
+    table row should contain    xpath://table[@id="table1"]/tbody    3    Jason
 #Validate column
-    #table column should contain    xpath://table[@id='table1']    5    poz
-##Validate cell
-#    table cell should contain    xpath://table[@id='table1']    3    3    fbach@yahoo.com
+    table column should contain    xpath://table[@id='table1']    5    Web Site
+#Validate cell
+    table cell should contain    xpath://table[@id='table1']    3    3    fbach@yahoo.com
+    close browser

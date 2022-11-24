@@ -1,7 +1,7 @@
 *** Settings ***
 Library             SeleniumLibrary
 Resource            ../Resources/P1802_LoginResources.robot
-Library             DataDriver    ../TestData/LoginData.xlsx
+Library             DataDriver    ../TestData/LoginData.csv
 
 
 Suite Setup         Open my browser

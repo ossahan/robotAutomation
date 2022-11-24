@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Resources/P013_L2_Resources.robot
+Resource    ../Resources/P1302_Resources.robot
 
 *** Variables ***
 ${url}    https://sockston.com/

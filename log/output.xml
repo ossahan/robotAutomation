@@ -1,30 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221119 11:51:24.115" rpa="false" schemaversion="3">
-<suite id="s1" name="P1901 DDT Excel" source="C:\development\robot-scripts\Automation\TestCases\P1901_DDT_Excel.robot">
-<kw name="Open my browser" library="P1802_LoginResources" type="SETUP">
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221125 00:50:06.016" rpa="false" schemaversion="3">
+<suite id="s1" name="L06 SpeedTests" source="C:\development\robot-scripts\Automation\TestCases\L06_SpeedTests.robot">
+<test id="s1-t1" name="RegTest" line="6">
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20221125 00:50:06.290" level="INFO">${speed} = 0 seconds</msg>
+<status status="PASS" starttime="20221125 00:50:06.290" endtime="20221125 00:50:06.291"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${speed}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221125 00:50:06.292" endtime="20221125 00:50:06.292"/>
+</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${LOGIN URL}</arg>
-<arg>${BROWSER}</arg>
+<arg>https://demowebshop.tricentis.com/register</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221119 11:51:24.431" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
-<status status="PASS" starttime="20221119 11:51:24.416" endtime="20221119 11:51:27.364"/>
+<msg timestamp="20221125 00:50:06.293" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20221125 00:50:06.292" endtime="20221125 00:50:08.580"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221119 11:51:27.364" endtime="20221119 11:51:27.488"/>
+<status status="PASS" starttime="20221125 00:50:08.580" endtime="20221125 00:50:08.699"/>
 </kw>
-<status status="PASS" starttime="20221119 11:51:24.416" endtime="20221119 11:51:27.488"/>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221125 00:50:08.699" endtime="20221125 00:50:08.700"/>
 </kw>
-<test id="s1-t1" name="LoginTestWithExcel using" line="14">
-<kw name="Invalid login">
-<arg>${username}</arg>
-<arg>${password}</arg>
-<msg timestamp="20221119 11:51:27.488" level="FAIL">Variable '${username}' not found.</msg>
-<status status="FAIL" starttime="20221119 11:51:27.488" endtime="20221119 11:51:27.488"/>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20221125 00:50:08.700" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20221125 00:50:08.700" endtime="20221125 00:50:11.809"/>
 </kw>
-<status status="FAIL" starttime="20221119 11:51:27.488" endtime="20221119 11:51:27.488">Variable '${username}' not found.</status>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:FirstName</arg>
+<arg>Osmo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221125 00:50:11.810" level="INFO">Typing text 'Osmo' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20221125 00:50:11.809" endtime="20221125 00:50:14.923"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:LastName</arg>
+<arg>Sahanen</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221125 00:50:14.924" level="INFO">Typing text 'Sahanen' into text field 'name:LastName'.</msg>
+<msg timestamp="20221125 00:50:15.946" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x002EACD3+2075859]
+	Ordinal0 [0x0027EE61+1633889]
+	Ordinal0 [0x0017B7BD+571325]
+	Ordinal0 [0x00162E1A+470554]
+	Ordinal0 [0x001CAA0B+895499]
+	Ordinal0 [0x001DAC96+961686]
+	Ordinal0 [0x001C7136+880950]
+	Ordinal0 [0x0019FEFD+720637]
+	Ordinal0 [0x001A0F3F+724799]
+	GetHandleVerifier [0x0059EED2+2769538]
+	GetHandleVerifier [0x00590D95+2711877]
+	GetHandleVerifier [0x0037A03A+521194]
+	GetHandleVerifier [0x00378DA0+516432]
+	Ordinal0 [0x0028682C+1665068]
+	Ordinal0 [0x0028B128+1683752]
+	Ordinal0 [0x0028B215+1683989]
+	Ordinal0 [0x00296484+1729668]
+	BaseThreadInitThunk [0x758FFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77A87BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77A87B8E+238]
+	(No symbol) [0x00000000]
+</msg>
+<msg timestamp="20221125 00:50:15.946" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x002EACD3+2075859]
+	Ordinal0 [0x0027EE61+1633889]
+	Ordinal0 [0x0017B7BD+571325]
+	Ordinal0 [0x00162E1A+470554]
+	Ordinal0 [0x001CAA0B+895499]
+	Ordinal0 [0x001DAC96+961686]
+	Ordinal0 [0x001C7136+880950]
+	Ordinal0 [0x0019FEFD+720637]
+	Ordinal0 [0x001A0F3F+724799]
+	GetHandleVerifier [0x0059EED2+2769538]
+	GetHandleVerifier [0x00590D95+2711877]
+	GetHandleVerifier [0x0037A03A+521194]
+	GetHandleVerifier [0x00378DA0+516432]
+	Ordinal0 [0x0028682C+1665068]
+	Ordinal0 [0x0028B128+1683752]
+	Ordinal0 [0x0028B215+1683989]
+	Ordinal0 [0x00296484+1729668]
+	BaseThreadInitThunk [0x758FFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77A87BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77A87B8E+238]
+	(No symbol) [0x00000000]
+</msg>
+<status status="FAIL" starttime="20221125 00:50:14.923" endtime="20221125 00:50:16.058"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Email</arg>
+<arg>osmosahanen@trbnm.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221125 00:50:16.058" endtime="20221125 00:50:16.059"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Password</arg>
+<arg>SahanenOsmo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221125 00:50:16.059" endtime="20221125 00:50:16.059"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>SahanenOsmo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221125 00:50:16.059" endtime="20221125 00:50:16.059"/>
+</kw>
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20221125 00:50:16.059" endtime="20221125 00:50:16.059"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${speed}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221125 00:50:16.060" endtime="20221125 00:50:16.060"/>
+</kw>
+<status status="FAIL" starttime="20221125 00:50:06.289" endtime="20221125 00:50:16.060">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x002EACD3+2075859]
+	Ordinal0 [0x0027EE61+1633889]
+	Ordinal0 [0x0017B7BD+571325]
+	Ordinal0 [0x00162E1A+470554]
+	Ordinal0 [0x001CAA0B+895499]
+	Ordinal0 [0x001DAC96+961686]
+	Ordinal0 [0x001C7136+880950]
+	Ordinal0 [0x0019FEFD+720637]
+	Ordinal0 [0x001A0F3F+724799]
+	GetHandleVerifier [0x0059EED2+2769538]
+	GetHandleVerifier [0x00590D95+2711877]
+	GetHandleVerifier [0x0037A03A+521194]
+	GetHandleVerifier [0x00378DA0+516432]
+	Ordinal0 [0x0028682C+1665068]
+	Ordinal0 [0x0028B128+1683752]
+	Ordinal0 [0x0028B215+1683989]
+	Ordinal0 [0x00296484+1729668]
+	BaseThreadInitThunk [0x758FFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77A87BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77A87B8E+238]
+	(No symbol) [0x00000000]
+</status>
 </test>
-<status status="FAIL" starttime="20221119 11:51:24.131" endtime="20221119 11:51:27.488"/>
+<status status="FAIL" starttime="20221125 00:50:06.018" endtime="20221125 00:50:16.061"/>
 </suite>
 <statistics>
 <total>
@@ -33,14 +169,36 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="P1901 DDT Excel">P1901 DDT Excel</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="L06 SpeedTests">L06 SpeedTests</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20221119 11:51:24.416" level="ERROR">[ DataDriver ] Error in robot file:
-  File "C:\development\robot-scripts\Automation\TestCases\P1901_DDT_Excel.robot", line 0</msg>
-<msg timestamp="20221119 11:51:24.416" level="ERROR">In source file:
-  File ".../TestData/LoginData.xlsx", line 0</msg>
-<msg timestamp="20221119 11:51:24.416" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find C:\development\robot-scripts\Automation\TestCases\.../TestData/LoginData.xlsx but file does not exist.</msg>
+<msg timestamp="20221125 00:50:15.946" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x002EACD3+2075859]
+	Ordinal0 [0x0027EE61+1633889]
+	Ordinal0 [0x0017B7BD+571325]
+	Ordinal0 [0x00162E1A+470554]
+	Ordinal0 [0x001CAA0B+895499]
+	Ordinal0 [0x001DAC96+961686]
+	Ordinal0 [0x001C7136+880950]
+	Ordinal0 [0x0019FEFD+720637]
+	Ordinal0 [0x001A0F3F+724799]
+	GetHandleVerifier [0x0059EED2+2769538]
+	GetHandleVerifier [0x00590D95+2711877]
+	GetHandleVerifier [0x0037A03A+521194]
+	GetHandleVerifier [0x00378DA0+516432]
+	Ordinal0 [0x0028682C+1665068]
+	Ordinal0 [0x0028B128+1683752]
+	Ordinal0 [0x0028B215+1683989]
+	Ordinal0 [0x00296484+1729668]
+	BaseThreadInitThunk [0x758FFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77A87BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77A87B8E+238]
+	(No symbol) [0x00000000]
+</msg>
 </errors>
 </robot>
