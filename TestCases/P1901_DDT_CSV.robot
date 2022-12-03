@@ -1,7 +1,7 @@
 *** Settings ***
 Library             SeleniumLibrary
 Resource            ../Resources/P1802_LoginResources.robot
-Library             DataDriver    ../TestData/LoginData.xlsx
+Library             DataDriver    ../TestData/LoginData.csv
 
 Suite Setup         Open my browser
 Suite Teardown      Close Browsers
@@ -9,7 +9,7 @@ Test Template       Invalid login
 
 
 *** Test Cases ***
-Login Test With Excel using    ${username}    ${password}
+LoginTestWithExcel using    ${username}    ${password}
 
 
 *** Keywords ***

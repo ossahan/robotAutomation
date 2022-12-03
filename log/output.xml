@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221119 11:51:24.115" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221203 01:48:32.125" rpa="false" schemaversion="3">
 <suite id="s1" name="P1901 DDT Excel" source="C:\development\robot-scripts\Automation\TestCases\P1901_DDT_Excel.robot">
 <kw name="Open my browser" library="P1802_LoginResources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221119 11:51:24.431" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
-<status status="PASS" starttime="20221119 11:51:24.416" endtime="20221119 11:51:27.364"/>
+<msg timestamp="20221203 01:48:32.423" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20221203 01:48:32.423" endtime="20221203 01:48:35.628"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221119 11:51:27.364" endtime="20221119 11:51:27.488"/>
+<status status="PASS" starttime="20221203 01:48:35.628" endtime="20221203 01:48:35.630"/>
 </kw>
-<status status="PASS" starttime="20221119 11:51:24.416" endtime="20221119 11:51:27.488"/>
+<status status="PASS" starttime="20221203 01:48:32.422" endtime="20221203 01:48:35.630"/>
 </kw>
-<test id="s1-t1" name="LoginTestWithExcel using" line="14">
+<test id="s1-t1" name="Login Test With Excel using" line="13">
 <kw name="Invalid login">
 <arg>${username}</arg>
 <arg>${password}</arg>
-<msg timestamp="20221119 11:51:27.488" level="FAIL">Variable '${username}' not found.</msg>
-<status status="FAIL" starttime="20221119 11:51:27.488" endtime="20221119 11:51:27.488"/>
+<msg timestamp="20221203 01:48:35.632" level="FAIL">Variable '${username}' not found.</msg>
+<status status="FAIL" starttime="20221203 01:48:35.631" endtime="20221203 01:48:35.632"/>
 </kw>
-<status status="FAIL" starttime="20221119 11:51:27.488" endtime="20221119 11:51:27.488">Variable '${username}' not found.</status>
+<status status="FAIL" starttime="20221203 01:48:35.630" endtime="20221203 01:48:35.632">Variable '${username}' not found.</status>
 </test>
-<status status="FAIL" starttime="20221119 11:51:24.131" endtime="20221119 11:51:27.488"/>
+<kw name="Close Browsers" library="P1802_LoginResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221203 01:48:35.633" endtime="20221203 01:48:41.797"/>
+</kw>
+<status status="PASS" starttime="20221203 01:48:35.633" endtime="20221203 01:48:41.798"/>
+</kw>
+<status status="FAIL" starttime="20221203 01:48:32.130" endtime="20221203 01:48:41.799"/>
 </suite>
 <statistics>
 <total>
@@ -37,10 +44,11 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20221119 11:51:24.416" level="ERROR">[ DataDriver ] Error in robot file:
+<msg timestamp="20221203 01:48:32.419" level="ERROR">[ DataDriver ] Error in robot file:
   File "C:\development\robot-scripts\Automation\TestCases\P1901_DDT_Excel.robot", line 0</msg>
-<msg timestamp="20221119 11:51:24.416" level="ERROR">In source file:
-  File ".../TestData/LoginData.xlsx", line 0</msg>
-<msg timestamp="20221119 11:51:24.416" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find C:\development\robot-scripts\Automation\TestCases\.../TestData/LoginData.xlsx but file does not exist.</msg>
+<msg timestamp="20221203 01:48:32.419" level="ERROR">In source file:
+  File "C:\development\robot-scripts\Automation\TestCases\../TestData/LoginData.xlsx", line 0</msg>
+<msg timestamp="20221203 01:48:32.422" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ImportError: Requirements (pandas, openpyxl) for XLSX support are not installed.
+    Use 'pip install -U robotframework-datadriver[XLS]' to install XLSX support.</msg>
 </errors>
 </robot>

@@ -12,6 +12,6 @@ LoginTC
 
 #We can write also only file name which we want to give and its extension like logo.png or logo.jpg. ==>>
 #When you do it this way, the photo will be automatically saved in the project.
-    capture element screenshot    id:new_user    loginBox.jpg    #slash isareti normalde test geliyor copy yapiyorsak burada duzeltmemiz gerekiyor
+    capture element screenshot    id:new_user    loginBox.jpg    #slash isareti normalde ters geliyor copy yapiyorsak burada duzeltmemiz gerekiyor
     capture page screenshot     Page.jpg
     close browser
