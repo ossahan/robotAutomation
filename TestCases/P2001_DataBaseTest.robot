@@ -2,6 +2,7 @@
 Library   DatabaseLibrary
 Library   OperatingSystem
 
+
 Suite Setup      Connect To Database     pymysql  ${DBName}    ${DBUser}    ${DBPass}   ${DBHost}  ${DBPort}
 
 Suite Teardown   Disconnect From Database

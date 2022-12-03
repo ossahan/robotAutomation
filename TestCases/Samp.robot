@@ -1,6 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library    String
+Library  FakerLibrary
+
 
 *** Test Cases ***
 TC1
@@ -13,3 +15,4 @@ TC1
                 Log To Console    ${str2}
      ${count}    Get Substring    Helsinki   -2
      Log To Console    ${count}
+     ${count}

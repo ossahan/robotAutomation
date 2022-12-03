@@ -22,7 +22,7 @@ Click Sign In
 Verify Succesfull Login
    ${loginText}   Get Text    xpath://a[@href='/logout']
    Log To Console    ${loginText}
-   Set Selenium Speed    5
+
    Element Text Should Be    ${loginPageVerificationElement}    Log out
 
 

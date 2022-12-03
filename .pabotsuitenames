@@ -1,0 +1,6 @@
+datasources:fbcda763ff57615b5ffa22f7679c254472e975f2
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:716d25a8463036ded08e9ad3f84ceef9a9310b54
+--suite Suites.P1901 DDT CSV
+--suite Suites.P1901 DDT Excel

@@ -1,15 +1,18 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  String
-Resource   ../Resources/P2304RegisterKeywordss.robot
+Library  FakerLibrary
+
+Resource   ../Resources/P2304RegisterKeywords.robot
+
 
 *** Variables ***
-${Browser}   chrome
+${Browser}   edge
 ${Gender}   F
 ${firstname}  sican
 ${lastname}   hasan
 ${url}   https://demowebshop.tricentis.com/register
-${email}  gertyekrh@hopkddlk.com
+${email}  gzertdyekrh@hopkddlk.com
 ${Password}  hasanfare
 
 *** Test Cases ***
@@ -18,11 +21,15 @@ Register Test
    Mark your gender    ${Gender}
    Enter First Name    ${firstname}
    Enter Last Name    ${lastname}
-   Enter Email    ${email}
    Enter Password    ${Password}
+   ${fakeEmail}   Free Email
+   Enter Email    ${fakeEmail}
+  
    Click register Button
    Verify Account Registered
-   Close All Browsers
+   #Close All Browsers
+
+
 
 
 
