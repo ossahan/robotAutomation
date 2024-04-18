@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${browser}    edge
+${browser}    chrome
 ${url}    https://www.2dehands.be/
 
 
@@ -11,7 +11,12 @@ ${url}    https://www.2dehands.be/
 Handling DropDowns and Lists
     open browser    ${url}    ${browser}
     maximize browser window
-    click button    id=gdpr-consent-banner-accept-button
+    Sleep    2
+    
+    Select Frame    xpath://*[@id="sp_message_iframe_1109478"]
+    click button    xpath://*[@title='Accepteren']
+    Unselect Frame
+    
     select from list by label  categoryId    Handtassen en Accessoires
     sleep    3
     select from list by index    categoryId    22
